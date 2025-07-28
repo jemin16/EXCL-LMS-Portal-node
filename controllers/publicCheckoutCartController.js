@@ -31,3 +31,27 @@ exports.createPublicGrid = async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 }
+
+exports.updatePublicGrid = async (req, res) => {
+    try {
+        const updatedPublicGrid = await publicCheckoutCartModel.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true }
+        );
+        res.json(updatedPublicGrid);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}
+
+exports.deletePublicGrid = async (req, res) => {
+    try {
+        const deletedPublicGrid = await publicCheckoutCartModel.findByIdAndDelete(req.params.id);
+        res.json(deletedPublicGrid);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}
