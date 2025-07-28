@@ -8,5 +8,7 @@ const uploadPublicCheckoutCartPhotos = createUploadIcon("uploads/publicCheckoutC
 
 router.get("/public-grid", publicCheckoutCartController.getPublicGrid);
 router.post("/public-grid", uploadPublicCheckoutCartPhotos.single("image"), publicCheckoutCartController.createPublicGrid);
+router.put("/public-grid/:id", uploadPublicCheckoutCartPhotos.single("image"), publicCheckoutCartController.updatePublicGrid);
+router.delete("/public-grid/:id", publicCheckoutCartController.deletePublicGrid);
 
 module.exports = router;
