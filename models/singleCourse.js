@@ -1,0 +1,37 @@
+const mongoose = require("mongoose");
+
+const singleCourseSchema = new mongoose.Schema({
+    image: String,
+    title: String,
+    subtitle: String,
+    description: String,
+    paragraphOne: String,
+    paragraphTwo: String,
+    paragraphThree: String,
+    paragraphFour: String,
+    learnTitle: String,
+    learnParagraphone: String,
+    learnParagraphtwo: String,
+    learnParagraphthree: String,
+    learnParagraphfour: String, 
+    learnParagraphfive: String,
+    learnParagraphsix: String,
+    whoTitle: String,
+    whoParagraphone: String,
+    whoParagraphtwo: String,
+    whoParagraphthree: String,
+    whoParagraphfour: String,
+    whoParagraphfive: String,   
+    whoParagraphsix: String,
+    whoParagraphseven: String,
+    CourseRequirementsTitle: String,
+    CourseRequirementsTitleone: String,
+    CourseRequirementsTitletwo: String, 
+    CourseRequirementsTitlethree: String,
+    CourseRequirementsTitlefour: String,
+    CourseRequirementsTitlefive: String,
+    CourseRequirementsTitlesix: String,
+    CourseRequirementsTitleseven: String,
+});
+
+module.exports = mongoose.model("SingleCourse", singleCourseSchema);
